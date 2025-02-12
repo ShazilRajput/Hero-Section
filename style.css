@@ -1,0 +1,12 @@
+.banner{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+ .banner .product{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    bottom: 170px;
+    
+ }

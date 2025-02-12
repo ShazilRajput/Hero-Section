@@ -1,12 +1,49 @@
+body{
+    background-image: url(assets/background.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .banner{
-    height: 100vh;
+    height: 90vh;
     overflow: hidden;
     position: relative;
 }
- .banner .product{
-    width: 500px;
-    height: 500px;
+.banner .product{
+    /* background-color: aliceblue; */
+    width: 400px;
+    height: 400px;
     position: absolute;
-    bottom: 170px;
-    
- }
+    bottom: 100px;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: 0.7s;
+    --left: -230px;
+    display: flex;
+}
+.banner .product .soda{
+    background: var(--url) var(--left) 0,url(assets/freepik__adjust__6953.png);
+    background-size: auto 100%;
+    width: 280px;
+    /* height: 400px; */
+    aspect-ratio: 2/3.8;
+    background-blend-mode: multiply;
+    mask-image: url(assets/freepik__adjust__6953.png);
+    mask-size: auto 100%;
+    transition: 2s;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.banner .product:hover{
+    --left: 1000px;
+    transform: translateX(-50%) translateY(-50px);
+}
+.banner .product .soda:nth-child(2){
+    opacity: 0;
+}
+.banner .product:hover .soda:nth-child(2){
+    opacity: 1;
+}
